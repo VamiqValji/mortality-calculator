@@ -1,11 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
-imr
+import React, { useState } from "react";
+import "./App.css";
+// Import Components
+import Title from "./components/Title";
+import Dots from "./components/Dots";
+import Input from "./components/Input";
 
 function App() {
   return (
     <div className="App">
-      <h1></h1>
+      <Title />
+      <Dots />
+      <Input />
     </div>
   );
 }
