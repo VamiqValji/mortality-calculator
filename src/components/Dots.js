@@ -6,9 +6,9 @@ function Dots() {
     // let li = React.createElement("li", {className="li"}, "test");
     // ReactDOM.render(li, document.getElementsByClassName("dots"));
 
-    const numbers = [1,1,1,1,1,1];
+    let numbers = [1,1,1];
     const listItems = numbers.map((number) =>
-    <li>•</li>);
+    <span>•</span>);
 
     ReactDOM.render(
         <ul>{listItems}</ul>,
@@ -17,11 +17,10 @@ function Dots() {
 
     return(
         <div>
-            
+            {/* <li></li>
             <li></li>
             <li></li>
-            <li></li>
-            <li></li>
+            <li></li> */}
         </div>
     )
 }
