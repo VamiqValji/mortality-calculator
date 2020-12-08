@@ -1,13 +1,18 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-function Dots() {
+function Dots({dots}) {
 
     // let li = React.createElement("li", {className="li"}, "test");
     // ReactDOM.render(li, document.getElementsByClassName("dots"));
+    
+    let numbers = [];
+    // let i = dots;
+    for (i = 0; i <= dots; i--) {
+        numbers.push(1);
+      }
 
-    let numbers = [1,1,1];
-    const listItems = numbers.map((number) =>
+    const listItems = numbers.map((number) => // for each number in numbers[]
     <span>•</span>);
 
     ReactDOM.render(
@@ -15,14 +20,14 @@ function Dots() {
         document.getElementById("dots")
       );
 
-    return(
-        <div>
-            {/* <li></li>
-            <li></li>
-            <li></li>
-            <li></li> */}
-        </div>
-    )
+    return(null)
+        // <div>
+        //     <li></li>
+        //     <li></li>
+        //     <li></li>
+        //     <li></li>
+        // </div>
+    // )
 }
 
 export default Dots;

@@ -3,7 +3,7 @@ import React from "react";
 function Title() {
     return(
         <div>
-            <h1>Hello React</h1>
+            <h1>Mortality Calculator</h1>
         </div>
     )
 }
