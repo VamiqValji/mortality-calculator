@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-function Dots({dots}) {
+function Dots({dots, birthdate}) {
 
     // let li = React.createElement("li", {className="li"}, "test");
     // ReactDOM.render(li, document.getElementsByClassName("dots"));
@@ -14,7 +14,16 @@ function Dots({dots}) {
         i = i + 1;
         numbers.push(i);
         console.log(numbers);
+        
     }
+
+    console.log(birthdate);
+
+    let currentMonth = birthdate.slice(5,7);
+    let monthsLeft = birthdate.slice(5,7);
+    let currentYear = birthdate.slice(0,4);
+    let yearsLeft = birthdate.slice(4,7);
+    console.log(currentMonth, currentYear);
 
     const listItems = numbers.map((number) => // for each number in numbers[]
     <span>•</span>);
