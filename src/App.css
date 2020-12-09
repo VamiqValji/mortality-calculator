@@ -4,15 +4,13 @@
   padding: 0;
 }
 
-#root {
+#root,
+#dots,
+#wisely,
+#description {
   display: flex;
   justify-content: center;
   text-align: center;
-}
-
-#dots {
-  display: flex;
-  justify-content: center;
 }
 
 .dotsContainer {

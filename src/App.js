@@ -7,14 +7,16 @@ import Dots from "./components/Dots";
 
 function App() {
 
-  const [dots, setDots] = useState(0);
+  // const [dots, setDots] = useState(0);
   const [birthdate, setBirthdate] = useState("");
+  const [lifeExpectancyYears, setLifeExpectancyYears] = useState(72.563);
 
   function Submit(e) {
     e.preventDefault();
-    let input = document.getElementById('birthday');
-    setDots(prev => prev + 1);
+    let input = document.getElementById('birthdayInput');
+    // setDots(prev => prev + 1);
     setBirthdate(prev => prev = input.value);
+    setLifeExpectancyYears(prev => prev = document.getElementById("lifeExpectancyYearsInput").value);
   }
 
   return (
@@ -23,14 +25,16 @@ function App() {
       {/* <Input /> */}
     <form onSubmit={Submit}>
       <label for="birthday">Birthday:</label>
-      <input type="date" id="birthday" name="birthday"/>
+      <input type="date" id="birthdayInput" name="birthday"/>
       <input type="submit"/>
+      <label for="lifeExpectancyYears">Life Expectancy:</label>
+      <input type="number" id="lifeExpectancyYearsInput" name="lifeExpectancyYears" placeholder="72.563 (Years)"/>
     </form>
     <div>Each • represents a month of your life.</div>
     <div className="life-stat">
       The average life expectancy at birth across all countries and economies is <span> <a href="https://data.worldbank.org/indicator/SP.DYN.LE00.IN">72.563 years.</a></span>
     </div>
-    <Dots birthdate={birthdate} key={dots}/>
+    <Dots birthdate={birthdate} lifeExpectancyYears={lifeExpectancyYears}/>
     </div>
   );
 }
