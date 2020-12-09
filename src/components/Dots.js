@@ -18,8 +18,6 @@ function Dots({birthdate}) {
         // console.log(numbers);
     }
 
-    console.log(birthdate);
-
     let birthMonth = parseInt(birthdate.slice(5,7));
     let birthYear = parseInt(birthdate.slice(0,4));
     let currentMonth = new Date().getMonth() + 1;
@@ -27,19 +25,12 @@ function Dots({birthdate}) {
     let yearsLived = 0;
     let monthsLived = 0;
 
-    // monthslived = birthmonth - currentdate, if birthmonth is greater than 
-    if (birthMonth == "" && birthYear == "") {
+    if (isNaN(birthMonth) == true || isNaN(birthYear) == true) {
         console.log("Invalid input.");
-    }
-    else {
-        console.log(birthMonth, birthYear);
-        if (birthMonth - currentMonth  ) {
-        } else if (birthMonth - currentMonth ) {
-        } else {
-
-        }
-
-        // let monthsLeft = lifeExpectancyMonths - monthsLived;
+    } else {
+        yearsLived = (currentYear - birthYear)
+        monthsLived = (yearsLived * 12) + (currentMonth - birthMonth);
+        console.log(monthsLived + " months lived.");
     }
     // console.log(new Date().getTime());
 

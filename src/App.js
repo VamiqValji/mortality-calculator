@@ -13,7 +13,6 @@ function App() {
   function Submit(e) {
     e.preventDefault();
     let input = document.getElementById('birthday');
-    console.log(input.value);
     setDots(prev => prev + 1);
     setBirthdate(prev => prev = input.value);
   }
