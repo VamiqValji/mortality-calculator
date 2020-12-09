@@ -36,13 +36,33 @@ function Dots({birthdate}) {
     }
 
     const listItems = numbers.map((number) => { // for each number in numbers[]
-    if (number < monthsLived) {
-        return <span className="livedDots">•</span>
-    }
-    else {
-        return <span className="unlivedDots">•</span>
-    }
+        if (number < monthsLived) {
+            return <span className="livedDots">•</span>
+        }
+        else {
+            return <span className="unlivedDots">•</span>
+        }
     });
+
+    // const maxLifeLivedMonths = 1500; // no one has lived past 125 years of age
+    //
+    // const listItems = numbers.map((number) => { // for each number in numbers[]
+    // if (number > maxLifeLivedMonths) {
+    //     return <div>Liar. You're not that old.</div>
+    // }
+    // else {
+    //     if (number > lifeExpectancyMonths) {
+    //         return <span className="moreDots">•</span>
+    //     } else {
+    //         if (number < lifeExpectancyMonths) {
+    //             return <span className="livedDots">•</span>
+    //         } else {
+    //           
+    //             return <span className="unlivedDots">•</span>
+    //         }
+    //     }
+    // }
+    // });
 
     ReactDOM.render(
         <li className="dotsContainer">{listItems}</li>,
@@ -52,7 +72,7 @@ function Dots({birthdate}) {
     return(
         <div>
             <div>{outputLivedMonths}</div>
-            <div className="wisely">Use your time wisely.</div>
+            <div className="wisely"><b>Use your time wisely.</b></div>
         </div>
     )
 }
