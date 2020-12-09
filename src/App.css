@@ -21,3 +21,7 @@
   width: 80%;
   flex-wrap: wrap;
 }
+
+.livedDots {
+  color: red;
+}
