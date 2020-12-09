@@ -10,12 +10,11 @@ function Dots({birthdate}) {
     
     let i = 0;
 
-    const lifeExpectancyMonths = 870; /* 72.563 * 12 = 870.756 */
+    const lifeExpectancyMonths = 870; /* 72.563 * 12 = 870.756 */ /* factors of 870: 1, 2, 3, 5, 6, 10, 15, 29, 30, 58, 87, 145, 174, 290, 435, 870 */
 
     while (i < lifeExpectancyMonths + 1) {
         i = i + 1;
         numbers.push(i);
-        // console.log(numbers);
     }
 
     let birthMonth = parseInt(birthdate.slice(5,7));
@@ -25,32 +24,32 @@ function Dots({birthdate}) {
     let yearsLived = 0;
     let monthsLived = 0;
 
-    if (isNaN(birthMonth) == true || isNaN(birthYear) == true) {
+    let output = "";
+
+    if (isNaN(birthMonth) === true || isNaN(birthYear) === true) {
         console.log("Invalid input.");
+        output = "Please enter a valid input."
     } else {
-        yearsLived = (currentYear - birthYear)
+        yearsLived = (currentYear - birthYear) 
         monthsLived = (yearsLived * 12) + (currentMonth - birthMonth);
         console.log(monthsLived + " months lived.");
+        output = "You have lived " + monthsLived + " months."
     }
-    // console.log(new Date().getTime());
 
     const listItems = numbers.map((number) => // for each number in numbers[]
     <span>•</span>
     );
 
     ReactDOM.render(
-        <ul>{listItems}</ul>,
+        <li className="dotsContainer">{listItems}</li>,
         document.getElementById("dots")
       );
 
-    return(null)
-        // <div>
-        //     <li></li>
-        //     <li></li>
-        //     <li></li>
-        //     <li></li>
-        // </div>
-    // )
+    return(
+        <div>
+            <div>{output}</div>
+        </div>
+    )
 }
 
 export default Dots;

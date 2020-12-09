@@ -20,17 +20,17 @@ function App() {
   return (
     <div className="App">
       <Title />
-      <Dots birthdate={birthdate} key={dots}/>
       {/* <Input /> */}
     <form onSubmit={Submit}>
       <label for="birthday">Birthday:</label>
       <input type="date" id="birthday" name="birthday"/>
       <input type="submit"/>
     </form>
-
+    <div>Each • represents a month of your life.</div>
     <div className="life-stat">
       The average life expectancy at birth across all countries and economies is <span> <a href="https://data.worldbank.org/indicator/SP.DYN.LE00.IN">72.563 years.</a></span>
     </div>
+    <Dots birthdate={birthdate} key={dots}/>
     </div>
   );
 }

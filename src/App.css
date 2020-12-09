@@ -7,9 +7,17 @@
 #root {
   display: flex;
   justify-content: center;
+  text-align: center;
 }
 
 #dots {
   display: flex;
   justify-content: center;
+}
+
+.dotsContainer {
+  display: flex;
+  justify-content: center;
+  width: 80%;
+  flex-wrap: wrap;
 }
