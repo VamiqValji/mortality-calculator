@@ -21,7 +21,7 @@ function App() {
   return (
     <div className="App">
       <Title />
-      <Dots dots={dots} birthdate={birthdate} />
+      <Dots birthdate={birthdate} key={dots}/>
       {/* <Input /> */}
     <form onSubmit={Submit}>
       <label for="birthday">Birthday:</label>
