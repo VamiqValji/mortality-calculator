@@ -43,11 +43,11 @@ function Dots({birthdate, lifeExpectancyYears}) {
         let approximateYears = deathYear - currentYear;
         if (approximateMonths < 0) {
             approximateYears --;
-            approximateMonths = Math.abs(approximateMonths);
+            approximateMonths = 12 - Math.abs(approximateMonths);
         }
-        if (approximateMonths === 12) {
+        if (approximateMonths >= 12) {
             approximateYears ++;
-            approximateMonths = 0;
+            approximateMonths -= 12;
         }
         ReactDOM.render(<div>You have lived approximately <b>{monthsLived} months</b>, or <b>{((monthsLived / lifeExpectancyMonths) * 100).toFixed(2)}%</b> of the given life expectancy.</div>, document.getElementById("description"));
         ReactDOM.render(<div>You will die approximately in <b>{listOfMonths[deathMonth]}</b> of <b>{deathYear}</b>.</div>, document.getElementById("description2"));

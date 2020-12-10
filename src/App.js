@@ -3,7 +3,7 @@ import "./App.css";
 // Import Components
 import Title from "./components/Title";
 import Dots from "./components/Dots";
-// import Input from "./components/Input";
+import Warning from "./components/Warning";
 
 function App() {
 
@@ -19,10 +19,10 @@ function App() {
 
   return (
     <div className="App">
+      <Warning />
       <Title />
       <div>Take all of the following information with a grain of salt, as such sensitive topics and dates can't be defined by a defined by this simple calculator.</div>
       <div>If you or someone you know is feeling suicidal, please reach out or help them reach out by calling <a href="https://suicidepreventionlifeline.org/talk-to-someone-now/">1-800-273-8255 (United States)</a>. More information <a href="https://suicidepreventionlifeline.org/">here (United States)</a>.</div>
-      {/* <Input /> */}
       <form onSubmit={Submit}>
         <label for="birthday">Birthday:</label>
         <input type="date" id="birthdayInput" name="birthday"/>

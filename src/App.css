@@ -25,3 +25,21 @@
 .livedDots {
   color: red;
 }
+
+.warningActive {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  /* color: red; */
+  background: #e74c3c;
+  /* display: flex; */
+  /* justify-content: center; */
+  /* align-items: center; */
+
+  /* display: flex;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%; */
+}
