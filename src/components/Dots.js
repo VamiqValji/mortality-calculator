@@ -10,14 +10,17 @@ function Dots({birthdate, lifeExpectancyYears}) {
     
     let i = 0;
 
+    let listOfMonths = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];    
     let birthMonth = parseInt(birthdate.slice(5,7));
     let birthYear = parseInt(birthdate.slice(0,4));
     let currentMonth = new Date().getMonth() + 1;
     let currentYear = new Date().getFullYear();
     let yearsLived = 0;
     let monthsLived = 0;
+    let deathMonth = 0;
+    let deathYear = 0;
 
-    if (lifeExpectancyYears === null) {
+    if (lifeExpectancyYears === "") {
         lifeExpectancyYears = 72.563;
     }
 
@@ -32,8 +35,11 @@ function Dots({birthdate, lifeExpectancyYears}) {
     } else {
         yearsLived = (currentYear - birthYear) 
         monthsLived = (yearsLived * 12) + (currentMonth - birthMonth);
+        deathYear = Math.round((((birthYear * 12) + birthMonth) + lifeExpectancyMonths) / 12);
+        deathMonth = (((birthYear * 12) + birthMonth) + lifeExpectancyMonths) % 12;
         // outputLivedMonths = "You have lived approximately " + monthsLived + " months of the average life expectancy, or " + ((monthsLived / lifeExpectancyMonths) * 100).toFixed(2) + "% of your life."
-        ReactDOM.render(<div>You have lived approximately <b>{monthsLived} months</b> of the average life expectancy, or <b>{((monthsLived / lifeExpectancyMonths) * 100).toFixed(2)}%</b> of your life.</div>, document.getElementById("description"));
+        ReactDOM.render(<div>You have lived approximately <b>{monthsLived} months</b>, or <b>{((monthsLived / lifeExpectancyMonths) * 100).toFixed(2)}%</b> of the given life expectancy.</div>, document.getElementById("description"));
+        ReactDOM.render(<div>You will die approximately in <b>{listOfMonths[deathMonth]}</b> of <b>{deathYear}</b>.</div>, document.getElementById("description2"));
     }
 
     while (i < lifeExpectancyMonths) {
@@ -50,30 +56,17 @@ function Dots({birthdate, lifeExpectancyYears}) {
         }
     });
 
-    // const maxLifeLivedMonths = 1500; // no one has lived past 125 years of age
-    //
-    // const listItems = numbers.map((number) => { // for each number in numbers[]
-    // if (number > maxLifeLivedMonths) {
-    //     return <div>Liar. You're not that old.</div>
-    // }
-    // else {
-    //     if (number > lifeExpectancyMonths) {
-    //         return <span className="moreDots">•</span>
-    //     } else {
-    //         if (number < lifeExpectancyMonths) {
-    //             return <span className="livedDots">•</span>
-    //         } else {
-    //           
-    //             return <span className="unlivedDots">•</span>
-    //         }
-    //     }
-    // }
-    // });
+    console.log(deathMonth, deathYear);
 
     ReactDOM.render(<div className="wisely"><b>Use your time wisely.</b></div>, document.getElementById("wisely"));
     ReactDOM.render(<li className="dotsContainer">{listItems}</li>, document.getElementById("dots"));
 
     return(null)
+        // <div className="">
+        //     <div><b>Use your time wisely.</b></div>
+        //     <li className="dotsContainer">{listItems}</li>
+        // </div>
+        // )
 }
 
 export default Dots;
