@@ -10,6 +10,7 @@
   --grey: #2c3e50;
   --lightWhite: #ecf0f1;
   --shadow: rgba(0, 0, 0, 0.411);
+  --orange: #e67e22;
 }
 
 ::-webkit-scrollbar {
@@ -31,10 +32,10 @@
 
 #root,
 #dots,
-#wisely,
+/* #wisely, */
 #description,
-#description2,
-#description3,
+/* #description2,
+#description3, */
 #warning {
   display: flex;
   justify-content: center;
@@ -59,7 +60,8 @@
   left: 50%;
   width: 100%;
   height: 100vh;
-  background: var(--red);
+  background: var(--red); /* For browsers that do not support gradients */
+  background-image: linear-gradient(to bottom right, var(--red), var(--orange));
 }
 
 .warningDiv h1 {
