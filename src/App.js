@@ -12,9 +12,15 @@ function App() {
 
   function Submit(e) {
     e.preventDefault();
-    let input = document.getElementById('birthdayInput');
-    setBirthdate(prev => prev = input.value);
-    setLifeExpectancyYears(prev => prev = document.getElementById("lifeExpectancyYearsInput").value);
+    let lifeEYinput = document.getElementById("lifeExpectancyYearsInput").value;
+    if (lifeEYinput > 1000) {
+      alert("Sorry, the life expectancy limit is capped at 1000 years so you don't break your computer with dots!");
+    }
+    else {
+      setLifeExpectancyYears(prev => prev = lifeEYinput);
+      let input = document.getElementById('birthdayInput');
+      setBirthdate(prev => prev = input.value);
+    }
   }
 
   return (
