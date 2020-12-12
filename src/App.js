@@ -35,11 +35,13 @@ function App() {
       <form onSubmit={Submit} className="form">
         <div className="birthdayInput">
           <label for="birthday">Birthday:</label>
+          <br/>
           <input type="date" id="birthdayInput" name="birthday"/>
         </div>
         <div className="lifeInput">
-        <label for="lifeExpectancyYears">Life Expectancy (Years):</label>
-        <input type="number" id="lifeExpectancyYearsInput" name="lifeExpectancyYears" placeholder="72.563"/>
+          <label for="lifeExpectancyYears">Life Expectancy (Years):</label>
+          <br/>
+          <input type="number" id="lifeExpectancyYearsInput" name="lifeExpectancyYears" placeholder="72.563"/>
         </div>
         <input type="submit"/>
       </form>

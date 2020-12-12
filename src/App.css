@@ -47,7 +47,7 @@
 .dotsContainer {
   color: var(--lightWhite);
   text-shadow: var(--shadow) 0.1rem 0.1rem;
-  font-size: 1.4rem;
+  font-size: 1.35rem;
 }
 .App {
   width: 50%;
@@ -78,15 +78,60 @@
   font-size: 1.7rem;
   color: white;
 }
+
 .form label {
   margin: 1rem;
 }
+
 .form input {
   font-size: 1.3rem;
 }
+
 #description {
-  margin-top: 1rem;
   color: white;
+}
+
+.birthdayInput input[type="date"],
+.lifeInput input[type="number"] {
+  color: black;
+  background: var(--lightWhite);
+  border: 0.2rem solid black;
+  border-radius: 0.5rem;
+  padding: 0.1rem;
+  transition: 0.25s;
+}
+.birthdayInput input[type="date"]:hover,
+.lifeInput input[type="number"]:hover {
+  /* color: black; */
+  background: white;
+}
+.birthdayInput input[type="date"]:focus,
+.lifeInput input[type="number"]:focus {
+  /* color: black; */
+  background: white;
+}
+
+.form input[type="submit"] {
+  background: black;
+  border: white 0.1rem solid;
+  color: white;
+  margin: 0.3rem;
+  width: 12rem;
+  border-radius: 5rem;
+  font-size: 2rem;
+  transition: 0.25s;
+  margin: 0.5rem 0rem 1.5rem 0rem;
+}
+
+.form input[type="submit"]:hover {
+  width: calc(12rem + 2vw);
+  background: white;
+  border: 0.1rem black solid;
+  color: var(--orange);
+}
+
+.form input[type="submit"]:hover {
+  background: white;
 }
 
 .dotsContainer {
@@ -98,6 +143,7 @@
   border: 0.5rem solid var(--lightWhite);
   border-radius: 0.5rem;
   color: white;
+  padding: 0.1rem;
 }
 
 .livedDots {
@@ -105,7 +151,7 @@
 }
 
 .warningActive {
-  position: absolute;
+  position: fixed;
   transform: translate(-50%, -50%);
   top: 50%;
   left: 50%;
@@ -154,10 +200,13 @@
   border-radius: 2rem;
   transition: 0.25s;
   font-weight: 500;
+  border: 0.1rem white solid;
 }
 
 .warningDiv button:hover {
   color: var(--red);
   background: white;
   cursor: pointer;
+  border: 0.1rem black solid;
+  width: calc(20rem + 2vw);
 }
