@@ -210,3 +210,15 @@
   border: 0.1rem black solid;
   width: calc(20rem + 2vw);
 }
+
+/* @media only screen and (max-width: 1200px) {
+  div.warningDiv h1.warningTitle {
+    font-size: 1.7em;
+  }
+  div.warningDiv div.warningText {
+    font-size: 0px;
+  }
+  div.warningDiv button {
+    width: 20rem;
+  }
+} */
