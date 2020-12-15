@@ -1,11 +1,11 @@
-import React from "react";
+/* import React from "react";
 // import mongoose from "mongoose";
 
 function UserData({birthdate}) {
 
     const mongoose = require("mongoose");
     // mongoose.connect("mongodb+srv://test:<cfa123123>@cluster0.bipmi.mongodb.net");
-    async await mongoose.connect('mongodb+srv://test:<cfa123123>@cluster0.bipmi.mongodb.net'), {
+    await mongoose.connect('mongodb+srv://test:<cfa123123>@cluster0.bipmi.mongodb.net'), {
         useNewUrlParser: true,
         useUnifiedTopology: true,
         useFindAndModify: false,
@@ -37,4 +37,5 @@ function UserData({birthdate}) {
     )
 }
 
-export default UserData;
+export default UserData; 
+*/

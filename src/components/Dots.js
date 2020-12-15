@@ -59,6 +59,7 @@ function Dots({birthdate, lifeExpectancyYears}) {
         <div>You have lived approximately <b>{monthsLived} months</b>, or <b>{((monthsLived / lifeExpectancyMonths) * 100).toFixed(2)}%</b> of the given life expectancy.</div>
         <div>You will die approximately in <b>{listOfMonths[deathMonth]}</b> of <b>{deathYear}</b>.</div>
         <div><b>{listOfMonths[deathMonth]}</b> of <b>{deathYear}</b> is in approximately <b>{approximateYears} years</b> and <b>{approximateMonths}</b> months.</div>
+        <div>Each <span className="livedDots">•</span> represents a month that has been <b>lived</b>.</div>
         <div className="wisely"><b>Use your time wisely.</b></div>
         </div>
         , document.getElementById("description"));

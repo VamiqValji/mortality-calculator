@@ -4,7 +4,8 @@ import "./App.css";
 import Title from "./components/Title";
 import Dots from "./components/Dots";
 import Warning from "./components/Warning";
-import UserData from "./components/UserData";
+// import UserData from "./components/UserData";
+import PastSubmissions from "./components/PastSubmissions";
 
 function App() {
   const [birthdate, setBirthdate] = useState("");
@@ -74,7 +75,8 @@ function App() {
         <input type="submit" />
       </form>
       <Dots birthdate={birthdate} lifeExpectancyYears={lifeExpectancyYears} />
-      <UserData birthdate={birthdate} />
+      {/* <UserData birthdate={birthdate} /> */}
+      <PastSubmissions bd={birthdate} li={lifeExpectancyYears} />
       <div className="background"></div>
     </div>
   );
