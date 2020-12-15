@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+/* import React, {useState} from "react";
 import ReactDOM from "react-dom";
 
 function PastSubmissions({bd, li}) {
@@ -35,3 +35,4 @@ function PastSubmissions({bd, li}) {
 }
 
 export default PastSubmissions;
+*/

@@ -1,11 +1,8 @@
 import React, { useState } from "react";
 import "./App.css";
 // Import Components
-import Title from "./components/Title";
 import Dots from "./components/Dots";
 import Warning from "./components/Warning";
-// import UserData from "./components/UserData";
-import PastSubmissions from "./components/PastSubmissions";
 
 function App() {
   const [birthdate, setBirthdate] = useState("");
@@ -28,7 +25,7 @@ function App() {
   return (
     <div className="App">
       <Warning />
-      <Title />
+      <h1>Mortality Calculator</h1>
       <div>
         Take all of the following information with a grain of salt, as such
         sensitive topics and dates can't be defined by a defined by this simple
@@ -75,8 +72,6 @@ function App() {
         <input type="submit" />
       </form>
       <Dots birthdate={birthdate} lifeExpectancyYears={lifeExpectancyYears} />
-      {/* <UserData birthdate={birthdate} /> */}
-      <PastSubmissions bd={birthdate} li={lifeExpectancyYears} />
       <div className="background"></div>
     </div>
   );

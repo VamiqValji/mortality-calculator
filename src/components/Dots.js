@@ -3,9 +3,6 @@ import ReactDOM from "react-dom";
 
 function Dots({birthdate, lifeExpectancyYears}) {
 
-    // let li = React.createElement("li", {className="li"}, "test");
-    // ReactDOM.render(li, document.getElementsByClassName("dots"));
-    
     let numbers = [];
     
     let i = 0;
@@ -24,15 +21,11 @@ function Dots({birthdate, lifeExpectancyYears}) {
         lifeExpectancyYears = 72.563;
     }
 
-    // const defaultLifeExpectancyYears = 72.563; // years
-    let lifeExpectancyMonths = Math.floor(lifeExpectancyYears * 12); /* 72.563 * 12 = 870.756 */ /* factors of 870: 1, 2, 3, 5, 6, 10, 15, 29, 30, 58, 87, 145, 174, 290, 435, 870 */
+    let lifeExpectancyMonths = Math.floor(lifeExpectancyYears * 12);
 
     if (isNaN(birthMonth) === true || isNaN(birthYear) === true) {
         console.log("Invalid input.");
         ReactDOM.render(<div><b>Please enter a valid input.</b></div>, document.getElementById("description"));
-        // ReactDOM.render(<div></div>, document.getElementById("description2"));
-        // ReactDOM.render(<div></div>, document.getElementById("description3"));
-        // ReactDOM.render(<div></div>, document.getElementById("wisely"));
 
     } else {
         yearsLived = (currentYear - birthYear) 
@@ -49,17 +42,13 @@ function Dots({birthdate, lifeExpectancyYears}) {
             approximateYears ++;
             approximateMonths -= 12;
         }
-        // ReactDOM.render(<div>You have lived approximately <b>{monthsLived} months</b>, or <b>{((monthsLived / lifeExpectancyMonths) * 100).toFixed(2)}%</b> of the given life expectancy.</div>, document.getElementById("description"));
-        // ReactDOM.render(<div>You will die approximately in <b>{listOfMonths[deathMonth]}</b> of <b>{deathYear}</b>.</div>, document.getElementById("description2"));
-        // ReactDOM.render(<div><b>{listOfMonths[deathMonth]}</b> of <b>{deathYear}</b> is in approximately <b>{approximateYears} years</b> and <b>{approximateMonths}</b> months.</div>, document.getElementById("description3"));
-        // ReactDOM.render(<div className="wisely"><b>Use your time wisely.</b></div>, document.getElementById("wisely"));
 
         ReactDOM.render(
         <div>
         <div>You have lived approximately <b>{monthsLived} months</b>, or <b>{((monthsLived / lifeExpectancyMonths) * 100).toFixed(2)}%</b> of the given life expectancy.</div>
         <div>You will die approximately in <b>{listOfMonths[deathMonth]}</b> of <b>{deathYear}</b>.</div>
         <div><b>{listOfMonths[deathMonth]}</b> of <b>{deathYear}</b> is in approximately <b>{approximateYears} years</b> and <b>{approximateMonths}</b> months.</div>
-        <div>Each <span className="livedDots">•</span> represents a month that has been <b>lived</b>.</div>
+        <div>Each <span className="livedDots">•</span> represents a month of your life that you have <b>lived</b>.</div>
         <div className="wisely"><b>Use your time wisely.</b></div>
         </div>
         , document.getElementById("description"));

@@ -21,10 +21,6 @@ function UserData({birthdate}) {
 
     let data = mongoose.model("data", dataSchema) // model name, what data the 
     // "schema" is being pushed to
-    // A document schema is a JSON object that allows you to define 
-    // the shape and content of documents and embedded documents in a 
-    // collection. ... Document schemas follow the same JSON schema 
-    // specification as document validation in the MongoDB server.
     let item = data({birthday: birthdate}).save(function (err) {
         if (err) throw err; // err means error
         console.log("Item saved.");
