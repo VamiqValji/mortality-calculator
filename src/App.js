@@ -38,7 +38,8 @@ function App() {
         <a href="https://suicidepreventionlifeline.org/">
           here (United States)
         </a>
-        .
+        . The point of this project is to simply remind you, the user, to use
+        their time wisely and live life to the fullest.
       </div>
       <br />
       <div>Each • represents a month of your life.</div>
