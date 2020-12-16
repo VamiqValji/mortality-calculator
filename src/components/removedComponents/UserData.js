@@ -4,8 +4,8 @@
 function UserData({birthdate}) {
 
     const mongoose = require("mongoose");
-    // mongoose.connect("mongodb+srv://test:<cfa123123>@cluster0.bipmi.mongodb.net");
-    await mongoose.connect('mongodb+srv://test:<cfa123123>@cluster0.bipmi.mongodb.net'), {
+    // mongoose.connect("mongodb+srv://test:<PASSWORD>@cluster0.bipmi.mongodb.net");
+    await mongoose.connect('mongodb+srv://test:<PASSWORD>@cluster0.bipmi.mongodb.net'), {
         useNewUrlParser: true,
         useUnifiedTopology: true,
         useFindAndModify: false,
