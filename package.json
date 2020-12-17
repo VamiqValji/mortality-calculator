@@ -2,6 +2,12 @@
   "name": "mortality-calculator",
   "version": "0.1.0",
   "main": "public/electron.js",
+  "description": "An app to remind the user to use their time wisely and live life to the fullest!",
+  "author": "Vamiq Valji",
+  "homepage": "./",
+  "build": {
+    "appId": "mortality-calculator.menu"
+  },
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.6",
     "@testing-library/react": "^11.2.2",
