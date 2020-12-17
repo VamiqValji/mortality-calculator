@@ -10,6 +10,7 @@ function createWindow() {
     webPreferences: {
       nodeIntegration: true,
     },
+    icon: __dirname + "/MortalityCalculatorx256ICO.ico",
   });
 
   win.loadURL(
