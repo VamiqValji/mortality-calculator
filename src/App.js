@@ -75,7 +75,14 @@ function App() {
         <input type="submit" />
       </form>
       <Dots birthdate={birthdate} lifeExpectancyYears={lifeExpectancyYears} />
-      <div className="madeByVamiqValji">Made by: Vamiq Valji <img src={githubLogo} width="10%" height="10%" /></div>
+      <a href="https://github.com/VamiqValji/mortality-calculator">
+      <div className="madeByVamiqValji">Made by: Vamiq Valji 
+      <img
+        src={githubLogo}
+        alt="GitHub Repo"
+      />
+      </div>
+      </a>
       <div className="background"></div>
     </div>
   );

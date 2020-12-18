@@ -30,13 +30,10 @@
   background: black;
 }
 
+#warning,
 #root,
-#dots,
-/* #wisely, */
 #description,
-/* #description2,
-#description3, */
-#warning {
+#dots {
   display: flex;
   justify-content: center;
   text-align: center;
@@ -62,7 +59,6 @@
   height: 100vh;
   background: var(--red); /* For browsers that do not support gradients */
   background-image: linear-gradient(to bottom right, var(--red), var(--orange));
-  /* background-image: linear-gradient(to bottom right, #2c3e50, #8e44ad); */
   z-index: -1;
 }
 
@@ -220,16 +216,105 @@
   padding: 0.5rem;
   /* border: 0.4rem rgba(0, 0, 0, 0.1) solid; */
   border-radius: 1rem;
+  transition: 0.25s;
+  font-size: 1em;
+  align-items: center;
 }
 
-/* @media only screen and (max-width: 1200px) {
-  div.warningDiv h1.warningTitle {
-    font-size: 1.7em;
+.madeByVamiqValji:hover {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.madeByVamiqValji img {
+  width: 2rem;
+  height: 2rem;
+  margin-left: 0.6rem;
+}
+
+@media only screen and (max-width: 1400px) {
+  .warningDiv {
+    width: 40%;
   }
-  div.warningDiv div.warningText {
-    font-size: 0px;
+}
+
+@media only screen and (max-width: 1024px) {
+  .warningDiv {
+    width: 60%;
   }
-  div.warningDiv button {
-    width: 20rem;
+  /* body {
+    display: none;
+  } */
+}
+
+@media only screen and (max-width: 768px) {
+  .warningDiv {
+    width: 70%;
   }
-} */
+  .warningDiv h1 {
+    font-size: 2em;
+  }
+  /* body {
+    display: none;
+  } */
+}
+
+@media only screen and (max-width: 525px) {
+  .warningDiv {
+    width: 80%;
+    font-size: 1.4em;
+  }
+  .warningDiv h1 {
+    font-size: 1.9em;
+  }
+  .madeByVamiqValji {
+    right: auto;
+    left: auto;
+    padding: 0.4rem;
+    font-size: 0.8em;
+    border-radius: 1.2rem;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .warningDiv {
+    font-size: 1.2em;
+  }
+  .warningDiv h1 {
+    font-size: 1.6em;
+  }
+  .warningDiv button {
+    margin: 1.5rem;
+    width: 16rem;
+  }
+  .warningDiv button:hover {
+    width: calc(16rem + 2vw);
+  }
+}
+
+@media only screen and (max-width: 325px) {
+  .warningDiv {
+    font-size: 1.1em;
+  }
+  .warningDiv h1 {
+    font-size: 1.4em;
+  }
+}
+
+@media only screen and (max-height: 400px) {
+  .warningDiv {
+    font-size: 0.9em;
+    width: 90%;
+  }
+  .warningDiv h1 {
+    font-size: 1.3rem;
+  }
+  .warningDiv button {
+    margin: 1rem;
+  }
+}
+
+@media only screen and (max-width: 1px) {
+  body {
+    display: none;
+  }
+}
