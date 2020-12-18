@@ -3,6 +3,8 @@ import "./App.css";
 // Import Components
 import Dots from "./components/Dots";
 import Warning from "./components/Warning";
+// Import Images
+import githubLogo from "./images/githubLogo.png";
 
 function App() {
   const [birthdate, setBirthdate] = useState("");
@@ -73,6 +75,7 @@ function App() {
         <input type="submit" />
       </form>
       <Dots birthdate={birthdate} lifeExpectancyYears={lifeExpectancyYears} />
+      <div className="madeByVamiqValji">Made by: Vamiq Valji <img src={githubLogo} width="10%" height="10%" /></div>
       <div className="background"></div>
     </div>
   );
