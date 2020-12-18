@@ -235,15 +235,31 @@
   .warningDiv {
     width: 40%;
   }
+  .App,
+  .dotsContainer {
+    width: 60%;
+  }
+  .App h1 {
+    margin: 1.3rem;
+  }
 }
 
 @media only screen and (max-width: 1024px) {
   .warningDiv {
     width: 60%;
   }
-  /* body {
-    display: none;
-  } */
+  .madeByVamiqValji {
+    padding: 0.3rem;
+    font-size: 0.8em;
+    border-radius: 1.2rem;
+  }
+  .App,
+  .dotsContainer {
+    width: 70%;
+  }
+  .App h1 {
+    font-size: 3em;
+  }
 }
 
 @media only screen and (max-width: 768px) {
@@ -253,9 +269,10 @@
   .warningDiv h1 {
     font-size: 2em;
   }
-  /* body {
-    display: none;
-  } */
+  .App,
+  .dotsContainer {
+    width: 80%;
+  }
 }
 
 @media only screen and (max-width: 525px) {
@@ -273,6 +290,14 @@
     font-size: 0.8em;
     border-radius: 1.2rem;
   }
+  .App,
+  .dotsContainer {
+    width: 90%;
+  }
+  .App h1 {
+    margin: 0.5rem;
+    font-size: 2.7em;
+  }
 }
 
 @media only screen and (max-width: 450px) {
@@ -289,14 +314,10 @@
   .warningDiv button:hover {
     width: calc(16rem + 2vw);
   }
-}
-
-@media only screen and (max-width: 325px) {
-  .warningDiv {
-    font-size: 1.1em;
-  }
-  .warningDiv h1 {
-    font-size: 1.4em;
+  .App h1 {
+    font-size: 2.2em;
+    margin: 0rem;
+    padding-top: 0.6rem;
   }
 }
 
@@ -310,6 +331,15 @@
   }
   .warningDiv button {
     margin: 1rem;
+  }
+}
+
+@media only screen and (max-width: 325px) {
+  .warningDiv {
+    font-size: 1.1em;
+  }
+  .warningDiv h1 {
+    font-size: 1.4em;
   }
 }
 

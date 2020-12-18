@@ -11,6 +11,15 @@ Main Screen
 Calculations Output
 ![](readme_images/main_in_use.PNG)
 
+To run (browser):
+
+```
+npm install
+npm start
+```
+
+Desktop download: (coming soon)
+
 This project is not fully responsive (to different devices sizes), and does not have back-end functionality; though I may come back and update this project.
 
 - Vamiq Valji
