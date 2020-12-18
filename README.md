@@ -1,25 +1,25 @@
 # Mortality Calculator
 
-> Projects's Purpose: To remind the user to use their time wisely and live life to the fullest.
+Projects's Purpose: To remind the user to use their time wisely and live life to the fullest.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-Notice Screen
-![](readme_images/notice_screen.PNG)
-Main Screen
-![](readme_images/main_screen.PNG)
-Calculations Output
-![](readme_images/main_in_use.PNG)
+> Notice Screen
+> ![](readme_images/notice_screen.PNG)
+> Main Screen
+> ![](readme_images/main_screen.PNG)
+> Calculations Output
+> ![](readme_images/main_in_use.PNG)
 
-To run (browser):
+Desktop download: (coming soon)
+
+To run (in browser):
 
 ```
 npm install
 npm start
 ```
 
-Desktop download: (coming soon)
-
-This project is not fully responsive (to different devices sizes), and does not have back-end functionality; though I may come back and update this project.
+This project does not have back-end functionality nor calculations to the exact seconds or days; though I may come back and update this project to have these features.
 
 - Vamiq Valji
