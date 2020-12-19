@@ -11,7 +11,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 > Calculations Output
 > ![](readme_images/main_in_use.PNG)
 
-Desktop download: (coming soon)
+[Desktop Download (Version 0.1.0)](https://drive.google.com/file/d/1eWSqFzDl8VE3OrWXiO_5hiYNrhmpqsvM/view?usp=sharing)
 
 To run (in browser):
 
