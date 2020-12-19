@@ -6,7 +6,13 @@
   "author": "Vamiq Valji",
   "homepage": "./",
   "build": {
-    "appId": "mortality-calculator.app"
+    "appId": "mortality-calculator.app",
+    "win": {
+      "icon": "build/logoPNGx256.png"
+    },
+    "mac": {
+      "icon": "build/logoPNGx256.png"
+    }
   },
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.6",

@@ -10,7 +10,7 @@ function createWindow() {
     webPreferences: {
       nodeIntegration: true,
     },
-    icon: __dirname + "/logoICOx256.ico",
+    icon: __dirname + "/logoPNGx256.png",
   });
 
   win.loadURL(

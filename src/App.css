@@ -208,6 +208,7 @@
 }
 
 .madeByVamiqValji {
+  z-index: 11;
   display: flex;
   position: fixed;
   bottom: 1.2rem;
@@ -284,8 +285,6 @@
     font-size: 1.9em;
   }
   .madeByVamiqValji {
-    right: auto;
-    left: auto;
     padding: 0.4rem;
     font-size: 0.8em;
     border-radius: 1.2rem;
@@ -340,11 +339,5 @@
   }
   .warningDiv h1 {
     font-size: 1.4em;
-  }
-}
-
-@media only screen and (max-width: 1px) {
-  body {
-    display: none;
   }
 }
