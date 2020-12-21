@@ -4,22 +4,39 @@ import ReactDOM from "react-dom";
 function BDays() {
 
   const [Bdays, SetBdays] = useState({bdays: []});
+  const [once, setOnce] = useState(0);
 
-  // componentDidMount( {
+  function getData () {
+    fetch("/")
+    .then(res => console.log(res.value))
+    .then(bdays => SetBdays(prev => prev = {bdays}))
+  }
+  
+  if (once > 0) {
+    getData();
+  }
+  else {
+    setOnce ++;
+  }
+  console.log(Bdays);
 
-  // })
+//   while (i < lifeExpectancyMonths) {
+//     i = i + 1;
+//     numbers.push(i);
+// }
 
-  fetch("/")
-  .then(res => res.json())
-  .then(bdays => this.setState({ bdays}))
+// const listItems = numbers.map((number) => { // for each number in numbers[]
+//     if (number < monthsLived) {
+//         return <span className="livedDots">•</span>
+//     }
+//     else {
+//         return <span className="unlivedDots">•</span>
+//     }
+// });
 
-  // function toggleActive() {
-  //   setToggle((prev) => !prev); 
-  // }
+// ReactDOM.render(<li>{listItems}</li>, document.getElementById("birthdates"));
 
-  return (
-    <div>b</div>
-    );
+  return (null)
 }
 
 export default BDays;
