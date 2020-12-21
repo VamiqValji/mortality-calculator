@@ -21,6 +21,7 @@
     "cross-env": "^7.0.3",
     "electron-is-dev": "^1.2.0",
     "express": "^4.17.1",
+    "express-generator": "^4.16.1",
     "mongoose": "^5.11.8",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
@@ -36,6 +37,7 @@
     "electron-package": "./node_modules/.bin/electron-builder -c.extraMetadata.main=build/electron.js",
     "preelectron-package": "npm run build"
   },
+  "proxy": "http://localhost:3001",
   "eslintConfig": {
     "extends": [
       "react-app",

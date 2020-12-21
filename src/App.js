@@ -3,6 +3,7 @@ import "./App.css";
 // Import Components
 import Dots from "./components/Dots";
 import Warning from "./components/Warning";
+import BDays from "./components/BDays";
 // Import Images
 import githubLogo from "./images/githubLogo.png";
 
@@ -76,13 +77,12 @@ function App() {
       </form>
       <Dots birthdate={birthdate} lifeExpectancyYears={lifeExpectancyYears} />
       <a href="https://github.com/VamiqValji/mortality-calculator">
-      <div className="madeByVamiqValji">Made by: Vamiq Valji 
-      <img
-        src={githubLogo}
-        alt="GitHub Repo"
-      />
-      </div>
+        <div className="madeByVamiqValji">
+          Made by: Vamiq Valji
+          <img src={githubLogo} alt="GitHub Repo" />
+        </div>
       </a>
+      <BDays />
       <div className="background"></div>
     </div>
   );

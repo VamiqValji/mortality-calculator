@@ -2,7 +2,6 @@ const express = require("express");
 const mongoose = require("mongoose");
 const { mongodbURL } = require("./mongodbURL");
 const app = express();
-const Blog = require("./models/bdays");
 const bday = require("./models/bdays");
 
 // connect to database
@@ -29,7 +28,7 @@ mongoose
 
 app.get("/", (req, res) => {
   bday
-    .find()
+    .find() // finds all as no other parameters are specified
     .then((result) => {
       res.send(result);
     })
