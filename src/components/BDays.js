@@ -15,7 +15,7 @@ function BDays() {
     SetBdays(prev => prev = bdayData)
   }
   
-  console.log(Bdays)
+  // console.log(Bdays)
 
   useEffect(() => {
     getData();
@@ -29,7 +29,12 @@ function BDays() {
 
   const birthdays = Bdays.map(birthday => {return <li>{birthday}</li>});
 
-  ReactDOM.render(<li className="bday">{birthdays}</li>, document.getElementById("birthdates"));
+  ReactDOM.render(
+  <div className="userData">
+    <h2>Past User Data</h2>
+    <div className="bday">{birthdays}</div>
+  </div>
+  , document.getElementById("birthdates"));
 
   // return (
   //   <div>

@@ -33,7 +33,8 @@
 #warning,
 #root,
 #description,
-#dots {
+#dots,
+#birthdates {
   display: flex;
   justify-content: center;
   text-align: center;
@@ -41,7 +42,8 @@
 
 .App,
 #description,
-.dotsContainer {
+.dotsContainer,
+#birthdates {
   color: var(--lightWhite);
   text-shadow: var(--shadow) 0.1rem 0.1rem;
   font-size: 1.35rem;
@@ -144,6 +146,28 @@
 
 .livedDots {
   color: red;
+}
+
+/* .userData .bday {
+  display: flex;
+  justify-self: center;
+  width: 50%;
+  flex-wrap: wrap;
+  margin: 1rem;
+  border: 0.5rem solid var(--lightWhite);
+  border-radius: 0.5rem;
+  color: white;
+  padding: 0.1rem;
+} */
+
+.userData li {
+  font-size: 1.3em;
+  list-style: none;
+}
+
+.userData h2 {
+  margin-top: 1.4rem;
+  font-size: 3rem;
 }
 
 .warningActive {
