@@ -4,13 +4,6 @@ const { mongodbURL } = require("./mongodbURL");
 const app = express();
 const bday = require("./models/bdays");
 const request = require("request");
-// const router = express.Router();
-
-// router.get("/", function (req, res, next) {
-//   res.json([
-//     {bday: String},
-//   ]);
-// });
 
 app.use((req, res, next) => {
   res.header("Access-Control-Allow-Origin", "http://localhost:3000");
