@@ -1,16 +1,29 @@
-import React, { useState } from "react";
-import ReactDOM from "react-dom";
+import React /*, { useState }*/ from "react";
+// import ReactDOM from "react-dom";
 
 function BDays() {
-  const [Bdays, SetBdays] = useState({ bdays: [] });
-  const [once, setOnce] = useState(0);
+  // const [Bdays, SetBdays] = useState({ bdays: [] });
+  // const [once, setOnce] = useState(0);
 
-  function getData() {}
+  // function getData() {}
 
-  fetch("/server").then((res) => console.log(res));
+  //
+
+  // promise failed
+  // fetch(
+  //   "https://cors-anywhere.herokuapp.com/https://localhost:3001/"
+  // ).then((res) => console.log(res.text));
+
+  // cors error
+  // fetch("https://localhost:3001/").then((res) => console.log(res));
+  let data = fetch("http://localhost:3001").then((res) => res.json());
+  console.log(data.bday);
+
+  // fetch("/").then((res) => console.log(res.text()));
+
   // .then(bdays => SetBdays(prev => prev = {bdays}))
 
-  getData();
+  // getData();
   // if (once > 0) {
   //   getData();
   // }

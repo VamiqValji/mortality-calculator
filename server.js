@@ -3,6 +3,7 @@ const mongoose = require("mongoose");
 const { mongodbURL } = require("./mongodbURL");
 const app = express();
 const bday = require("./models/bdays");
+const request = require("request");
 // const router = express.Router();
 
 // router.get("/", function (req, res, next) {
@@ -10,6 +11,11 @@ const bday = require("./models/bdays");
 //     {bday: String},
 //   ]);
 // });
+
+app.use((req, res, next) => {
+  res.header("Access-Control-Allow-Origin", "http://localhost:3000");
+  next();
+});
 
 // connect to database
 port = 3001;
