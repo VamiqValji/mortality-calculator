@@ -3,14 +3,24 @@ const mongoose = require("mongoose");
 const { mongodbURL } = require("./mongodbURL");
 const app = express();
 const bday = require("./models/bdays");
+// const router = express.Router();
+
+// router.get("/", function (req, res, next) {
+//   res.json([
+//     {bday: String},
+//   ]);
+// });
 
 // connect to database
+port = 3001;
 mongoose
   .connect(mongodbURL, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
-  .then((result) => app.listen(3001))
+  .then((result) =>
+    app.listen(port, () => console.log("listening to port " + port))
+  )
   .catch((err) => console.log(err));
 
 // app.get("/new", (req, res) => {
