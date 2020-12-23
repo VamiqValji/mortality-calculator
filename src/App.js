@@ -6,6 +6,9 @@ import Warning from "./components/Warning";
 import BDays from "./components/BDays";
 // Import Images
 import githubLogo from "./images/githubLogo.png";
+import axios from "axios";
+// Import Functions
+// import { sendData } from '../server';
 
 function App() {
   const [birthdate, setBirthdate] = useState("");
@@ -23,6 +26,22 @@ function App() {
       let input = document.getElementById("birthdayInput");
       setBirthdate((prev) => (prev = input.value));
     }
+
+    axios.defaults.headers.post['Access-Control-Allow-Origin'] = '*';
+    axios.use((req, res, next) => {
+      res.header("Access-Control-Allow-Origin", "http://localhost:3000");
+      next();
+    });
+
+    axios.post("mongodb+srv://test:cfa123123@cluster0.bipmi.mongodb.net/birthdates-list?retryWrites=true&w=majority",
+    {
+      bday: String,
+    }).then(response => {
+      console.log(response)
+    }).catch(error => {console.log})
+
+    // console.log(birthdate)
+    // sendData(birthdate);
   }
 
   return (

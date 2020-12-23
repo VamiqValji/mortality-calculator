@@ -22,19 +22,6 @@ mongoose
   )
   .catch((err) => console.log(err));
 
-// app.get("/new", (req, res) => {
-//   const BDAY = new bday({
-//     bday: "test1",
-//   });
-//   BDAY.save().then((result) => {
-//     // saves to database
-//     res.send(result);
-//     console.log(result).catch((err) => {
-//       console.log(err);
-//     });
-//   });
-// });
-
 app.get("/", (req, res) => {
   bday
     .find() // finds all as no other parameters are specified
@@ -45,3 +32,35 @@ app.get("/", (req, res) => {
       console.log(err);
     });
 });
+
+// const sendData = (data) => {
+//   console.log(birthdate + "received");
+//   app.get("/new", (req, res) => {
+//     const BDAY = new bday({
+//       bday: data, // bday: "test1",
+//     });
+//     BDAY.save().then((result) => {
+//       // saves to database
+//       res.send(result);
+//       console.log(result).catch((err) => {
+//         console.log(err);
+//       });
+//     });
+//   });
+// };
+
+// console.log(birthdate + "received");
+app.get("/", (req, res) => {
+  const BDAY = new bday({
+    bday: "test2", // bday: "test1",
+  });
+  BDAY.save().then((result) => {
+    // saves to database
+    res.send(result);
+    console.log(result).catch((err) => {
+      console.log(err);
+    });
+  });
+});
+
+app.post(mongodbURL, (req, res) => {});
