@@ -14,6 +14,10 @@ function App() {
   const [birthdate, setBirthdate] = useState("");
   const [lifeExpectancyYears, setLifeExpectancyYears] = useState(72.563);
 
+  //DELETE DURING COMMIT
+
+  //DELETE DURING COMMIT
+
   function Submit(e) {
     e.preventDefault();
     let lifeEYinput = document.getElementById("lifeExpectancyYearsInput").value;
@@ -27,21 +31,20 @@ function App() {
       setBirthdate((prev) => (prev = input.value));
     }
 
-    axios.defaults.headers.post['Access-Control-Allow-Origin'] = '*';
-    axios.use((req, res, next) => {
-      res.header("Access-Control-Allow-Origin", "http://localhost:3000");
-      next();
-    });
+    onSub();
+  }
 
-    axios.post("mongodb+srv://test:cfa123123@cluster0.bipmi.mongodb.net/birthdates-list?retryWrites=true&w=majority",
-    {
-      bday: String,
-    }).then(response => {
-      console.log(response)
-    }).catch(error => {console.log})
-
-    // console.log(birthdate)
-    // sendData(birthdate);
+  const onSub = async (e) => {
+    try {
+      const res = await axios.post(url, dataSchem, {
+        headers: {
+          "Content-Type": "application/json",
+          "mode": "no-cors"
+        }
+      })
+    } catch(err) {
+      console.log(err)
+    }
   }
 
   return (

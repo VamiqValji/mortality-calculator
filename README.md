@@ -11,15 +11,23 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 > Calculations Output
 > ![](readme_images/main_in_use.PNG)
 
-[Desktop Download (Version 0.1.0)](https://drive.google.com/file/d/1eWSqFzDl8VE3OrWXiO_5hiYNrhmpqsvM/view?usp=sharing)
+[Desktop Download (Version 0.1.0, No Back-End)](https://drive.google.com/file/d/1eWSqFzDl8VE3OrWXiO_5hiYNrhmpqsvM/view?usp=sharing)
 
 To run (in browser):
 
+> Install Dependancies
+
 ```
 npm install
+```
+
+> Run
+
+```
+node server
 npm start
 ```
 
-This project does not have back-end functionality nor calculations to the exact seconds or days; though I may come back and update this project to have these features.
+This project may be further updated.
 
 - Vamiq Valji
