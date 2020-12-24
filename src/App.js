@@ -6,17 +6,13 @@ import Warning from "./components/Warning";
 import BDays from "./components/BDays";
 // Import Images
 import githubLogo from "./images/githubLogo.png";
+// Other
 import axios from "axios";
-// Import Functions
-// import { sendData } from '../server';
+
 
 function App() {
   const [birthdate, setBirthdate] = useState("");
   const [lifeExpectancyYears, setLifeExpectancyYears] = useState(72.563);
-
-  //DELETE DURING COMMIT
-
-  //DELETE DURING COMMIT
 
   function Submit(e) {
     e.preventDefault();
@@ -30,22 +26,14 @@ function App() {
       let input = document.getElementById("birthdayInput");
       setBirthdate((prev) => (prev = input.value));
     }
-
-    onSub();
-  }
-
-  const onSub = async (e) => {
-    try {
-      const res = await axios.post(url, dataSchem, {
-        headers: {
-          "Content-Type": "application/json",
-          "mode": "no-cors"
-        }
+    // onSub();
+    console.log(birthdate)
+    axios.post("http://localhost:3001/api/birthdays", {
+        bday: birthdate,
       })
-    } catch(err) {
-      console.log(err)
+      .then(res => console.log(res))
+      .catch((err) => console.log(err.response.data.message))
     }
-  }
 
   return (
     <div className="App">
@@ -83,7 +71,7 @@ function App() {
         <div className="birthdayInput">
           <label for="birthday">Birthday:</label>
           <br />
-          <input type="date" id="birthdayInput" name="birthday" />
+          <input type="date" id="birthdayInput" name="birthday" required/>
         </div>
         <div className="lifeInput">
           <label for="lifeExpectancyYears">Life Expectancy (Years):</label>

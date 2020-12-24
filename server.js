@@ -4,11 +4,15 @@ const { mongodbURL } = require("./mongodbURL");
 const app = express();
 const bday = require("./models/bdays");
 const request = require("request");
+const cors = require("cors");
 
-app.use((req, res, next) => {
-  res.header("Access-Control-Allow-Origin", "http://localhost:3000");
-  next();
-});
+const birthdays = require("./routes/birthdays");
+
+app.use(express.json());
+
+app.use(cors({}));
+
+app.use("/api/birthdays", birthdays);
 
 // connect to database
 port = 3001;
@@ -18,47 +22,6 @@ mongoose
     useUnifiedTopology: true,
   })
   .then((result) =>
-    app.listen(port, () => console.log("listening to port " + port))
-  )
-  .catch((err) => console.log(err));
-
-app.get("/", (req, res) => {
-  bday
-    .find() // finds all as no other parameters are specified
-    .then((result) => {
-      res.send(result);
-    })
-    .catch((err) => {
-      console.log(err);
-    });
-});
-
-const sendData = (data) => {
-  console.log(birthdate + "received");
-  app.get("/new", (req, res) => {
-    const BDAY = new bday({
-      bday: data, // bday: "test1",
-    });
-    BDAY.save().then((result) => {
-      // saves to database
-      res.send(result);
-      console.log(result).catch((err) => {
-        console.log(err);
-      });
-    });
-  });
-};
-
-// console.log(birthdate + "received");
-// app.get("/", (req, res) => {
-//   const BDAY = new bday({
-//     bday: "test2", // bday: "test1",
-//   });
-//   BDAY.save().then((result) => {
-//     // saves to database
-//     res.send(result);
-//     console.log(result).catch((err) => {
-//       console.log(err);
-//     });
-//   });
-// });
+    app.listen(port, () => console.log("Listening to port " + port))
+  );
+// .catch((err) => console.log(err));
