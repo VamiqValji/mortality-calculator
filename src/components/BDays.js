@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import ReactDOM from "react-dom";
 
-function BDays() {
+function BDays(/*{bd}*/) {
   const [Bdays, SetBdays] = useState([]);
 
   let bdayData = [];
@@ -19,17 +19,27 @@ function BDays() {
     getData();
   }, []);
 
+  // if (bd.length < 5 && bd.length > 12 && Bdays.includes(bd) === false) {
+  //   console.log(bd)
+  //   SetBdays(prev => prev.push(bd));
+  // }
+
   const birthdays = Bdays.map((birthday) => {
     return <li>{birthday}</li>;
   });
 
-  ReactDOM.render(
-    <div className="userData">
-      <h2>Past User Data</h2>
-      <div className="bday">{birthdays}</div>
-    </div>,
-    document.getElementById("birthdates")
-  );
+  if (birthdays.length > 0) {
+    ReactDOM.render(
+      <div className="userData">
+        <p>
+          <h2>Past User Birthdates</h2>
+          <br/>
+          <div className="bday">{birthdays}</div>
+        </p>
+      </div>,
+      document.getElementById("birthdates")
+    );
+  }
 
   // return (
   //   <div>

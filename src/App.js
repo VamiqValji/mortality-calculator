@@ -26,8 +26,6 @@ function App() {
       let input = document.getElementById("birthdayInput");
       setBirthdate((prev) => (prev = input.value));
     }
-    // onSub();
-    console.log(birthdate)
     axios.post("http://localhost:3001/api/birthdays", {
         bday: birthdate,
       })
@@ -92,7 +90,7 @@ function App() {
           <img src={githubLogo} alt="GitHub Repo" />
         </div>
       </a>
-      <BDays />
+      <BDays /*bd={birthdate}*/ />
       <div className="background"></div>
     </div>
   );

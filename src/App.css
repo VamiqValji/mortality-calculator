@@ -132,7 +132,8 @@
   background: white;
 }
 
-.dotsContainer {
+.dotsContainer,
+.userData {
   display: flex;
   justify-content: center;
   width: 50%;
@@ -148,17 +149,9 @@
   color: red;
 }
 
-/* .userData .bday {
-  display: flex;
-  justify-self: center;
-  width: 50%;
-  flex-wrap: wrap;
-  margin: 1rem;
-  border: 0.5rem solid var(--lightWhite);
-  border-radius: 0.5rem;
-  color: white;
-  padding: 0.1rem;
-} */
+.userData li:last-child {
+  margin-bottom: 1rem;
+}
 
 .userData li {
   font-size: 1.3em;
@@ -166,7 +159,7 @@
 }
 
 .userData h2 {
-  margin-top: 1.4rem;
+  margin: 1.2rem 0rem -1.3rem 0rem;
   font-size: 3rem;
 }
 
@@ -261,7 +254,8 @@
     width: 40%;
   }
   .App,
-  .dotsContainer {
+  .dotsContainer,
+  .userData {
     width: 60%;
   }
   .App h1 {
@@ -279,7 +273,8 @@
     border-radius: 1.2rem;
   }
   .App,
-  .dotsContainer {
+  .dotsContainer,
+  .userData {
     width: 70%;
   }
   .App h1 {
@@ -291,11 +286,16 @@
   .warningDiv {
     width: 70%;
   }
-  .warningDiv h1 {
+  .warningDiv h1,
+  .userData h2 {
     font-size: 2em;
   }
+  .userData .bday {
+    font-size: 0.9em;
+  }
   .App,
-  .dotsContainer {
+  .dotsContainer,
+  .userData {
     width: 80%;
   }
 }
@@ -314,7 +314,8 @@
     border-radius: 1.2rem;
   }
   .App,
-  .dotsContainer {
+  .dotsContainer,
+  .userData {
     width: 90%;
   }
   .App h1 {
@@ -358,10 +359,14 @@
 }
 
 @media only screen and (max-width: 325px) {
-  .warningDiv {
+  .warningDiv,
+  .userData h2 {
     font-size: 1.1em;
   }
   .warningDiv h1 {
     font-size: 1.4em;
+  }
+  .userData .bday {
+    font-size: 0.6em;
   }
 }

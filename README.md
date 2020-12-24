@@ -13,7 +13,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 [Desktop Download (Version 0.1.0, No Back-End)](https://drive.google.com/file/d/1eWSqFzDl8VE3OrWXiO_5hiYNrhmpqsvM/view?usp=sharing)
 
-To run (in browser):
+To run locally (in browser):
+
+- First replace the the url in "mongodbURL.js" to your own if you want to run the back-end.
 
 > Install Dependancies
 

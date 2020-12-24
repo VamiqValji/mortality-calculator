@@ -24,6 +24,6 @@ yarn-error.log*
 
 /dist
 
-mongodbURL.js
+#mongodbURL.js
 
 .eslintcache

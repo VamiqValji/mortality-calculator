@@ -13,12 +13,16 @@ router.get("/", (req, res) => {
 });
 
 router.post("/", async (req, res) => {
-  // check for duplicates
+  // filters
+  // console.log(req.body.bday);
+  if (req.body.bday.length < 5 && req.body.bday.length > 12) {
+    return res.status(400).json({ message: "Invalid birthdate." });
+  }
   var item = await bday.findOne({ bday: req.body.bday });
   if (item) {
     return res.status(400).json({ message: "That birthday already exists" });
   }
-  // else no duplicates, create new item in database
+  // else, create new item in database
   item = new bday({
     bday: req.body.bday,
   });
