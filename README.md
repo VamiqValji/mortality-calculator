@@ -17,7 +17,9 @@ This project was created using the MERN stack.
 
 ## Usage
 
-[Desktop Download (Version 0.1.0, No Back-End)](https://drive.google.com/file/d/1eWSqFzDl8VE3OrWXiO_5hiYNrhmpqsvM/view?usp=sharing)
+### To run as a desktop application:
+
+[Desktop Download (Version 0.1, No Back-End)](https://drive.google.com/file/d/1eWSqFzDl8VE3OrWXiO_5hiYNrhmpqsvM/view?usp=sharing)
 
 ### To run locally (in browser):
 
