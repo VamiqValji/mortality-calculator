@@ -21,7 +21,7 @@ This project was created using the MERN stack.
 
 ### To run locally (in browser):
 
-First replace the url in "mongodbURL.js" to your own if you want to run the back-end.
+First replace the url in "mongodbURL.js" to your own database link if you want to run the back-end of the application.
 
 > Install Dependancies
 
@@ -37,5 +37,7 @@ npm start
 ```
 
 This project may be further updated.
+
+Version: 1.0
 
 - Vamiq Valji
